@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wrapper {
+  width: auto;
+  height: 321px;
+  margin: 0;
+  padding: 0;
+}
+
+.container-top {
+  width: auto;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  width: 50%;
+  height: auto;
+}
+
+.left a img {
+  width: 60%;
+}
+
+.dots-button {
+  padding: 20px 5px 0 10px;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 60px;
+}
+
+.dots-button:hover .right {
+  display: block;
+}
+
+.right .top-bar {
+  width: 100%;
+  height: 10%;
+  padding: 0.5rem;
+  background-color: rgba(49, 63, 45, 0.829);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar .search {
+  width: 50%;
+  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.top-bar .login {
+  width: 20px;
+  height: 20px;
+}
+
+.top-bar .login img {
+  width: 100%;
+}
+
+.bottom-bar nav {
+  width: 100%;
+}
+
+.bottom-bar nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bottom-bar nav ul li {
+  padding: 0.5rem;
+  background-color: rgba(49, 63, 45, 0.829);
+  text-align: center;
+  margin: 1px 0;
+}
+
+.bottom-bar nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.container-header {
+  width: 100%;
+  background-image: url(./images/algonquin_header.jpg);
+  background-size: cover;
+  background-position: bottom;
+  padding: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-content .boxes {
+  width: 90%;
+  margin: 1rem 0;
+  border: 5px solid #a2a2a2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxes img {
+  width: 95%;
+}
+
+.container-footer {
+  height: 50px;
+  width: auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-footer p {
+  color: #a2a2a2;
+}
+
+@media all and (min-width: 35rem) {
+  .container-top {
+    height: 100px;
+  }
+
+  .left {
+    width: 15%;
+    height: auto;
+  }
+
+  .left a img {
+    width: 100%;
+  }
+  .dots-button .hide {
+    display: none;
+  }
+
+  .dots-button {
+    padding: 0;
+    width: 80%;
+  }
+
+  .right {
+    display: block;
+    height: 50%;
+    position: initial;
+  }
+
+  .right .top-bar {
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .top-bar .login {
+    width: 20px;
+  }
+
+  .login img {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .top-bar .search {
+    width: 200px;
+    margin-left: 10px;
+  }
+
+  .bottom-bar {
+    width: 100%;
+  }
+
+  .bottom-bar nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .bottom-bar nav ul li {
+    width: calc(80% / 5);
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+  }
+
+  .container-content {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+    margin: 1rem auto;
+    border: 2px solid gray;
+  }
+
+  .container-content .boxes {
+    width: calc(100% / 4 - 2rem);
+    margin: 1rem;
+  }
+}
